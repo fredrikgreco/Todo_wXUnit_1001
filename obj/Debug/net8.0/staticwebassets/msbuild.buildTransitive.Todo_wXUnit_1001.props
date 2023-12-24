@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Todo_wXUnit_1001.props" />
+</Project>

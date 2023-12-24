@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Todo_wXUnit_1001")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+22b77145be8095e39846ee991b0d1d1d82fe3305")]
 [assembly: System.Reflection.AssemblyProductAttribute("Todo_wXUnit_1001")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Todo_wXUnit_1001")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
