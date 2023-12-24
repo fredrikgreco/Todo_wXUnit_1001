@@ -15,4 +15,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Todo_wXUnit_Models\Todo_wXUnit_Models.csproj" />
+  </ItemGroup>
+
 </Project>

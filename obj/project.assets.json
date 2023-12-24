@@ -1177,6 +1177,20 @@
             "rid": "win"
           }
         }
+      },
+      "Todo_wXUnit_Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "EntityFramework": "6.4.4",
+          "Microsoft.EntityFrameworkCore.InMemory": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Todo_wXUnit_Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Todo_wXUnit_Models.dll": {}
+        }
       }
     }
   },
@@ -3277,13 +3291,19 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Todo_wXUnit_Models/1.0.0": {
+      "type": "project",
+      "path": "../Todo_wXUnit_Models/Todo_wXUnit_Models.csproj",
+      "msbuildProject": "../Todo_wXUnit_Models/Todo_wXUnit_Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "EntityFramework >= 6.4.4",
       "Microsoft.EntityFrameworkCore.InMemory >= 8.0.0",
-      "Microsoft.EntityFrameworkCore.Tools >= 8.0.0"
+      "Microsoft.EntityFrameworkCore.Tools >= 8.0.0",
+      "Todo_wXUnit_Models >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -3318,7 +3338,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\GitRepo\\Todo_wXUnit_Models\\Todo_wXUnit_Models.csproj": {
+              "projectPath": "D:\\GitRepo\\Todo_wXUnit_Models\\Todo_wXUnit_Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
