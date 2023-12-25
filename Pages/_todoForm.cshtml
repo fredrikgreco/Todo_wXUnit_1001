@@ -1,0 +1,34 @@
+﻿@model Todo_wXUnit_1001.Pages.IndexModel
+
+
+<div id="headMainGrid">
+
+    <div id="leftLogoCell">
+    </div>
+
+    <div id="rightFormGrid">
+
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="Todo.Title"></label>
+                <input asp-for="Todo.Title" class="form-control" />
+                <span asp-validation-for="Todo.Title" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Todo.Content"></label>
+                <textarea asp-for="Todo.Content" class="form-control"></textarea>
+                <span asp-validation-for="Todo.Content" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Todo.IsDone"></label>
+                <input asp-for="Todo.IsDone" type="checkbox" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+
+    </div>
+
+</div>

@@ -5,9 +5,9 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Todo_wXUnit_1001", "Todo_wXUnit_1001.csproj", "{A5522040-F8DC-44A9-A832-EE3EF2538238}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo_wXUnit_Models", "..\Todo_wXUnit_Models\Todo_wXUnit_Models.csproj", "{387DA9F8-E81C-4392-B807-D3BB8FE1EFD5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Todo_wXUnit_Models", "..\Todo_wXUnit_Models\Todo_wXUnit_Models.csproj", "{387DA9F8-E81C-4392-B807-D3BB8FE1EFD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo_wXUnit_Tests", "..\Todo_wXUnit_Tests\Todo_wXUnit_Tests.csproj", "{EBB766A3-DF9B-4212-B08B-5CB2E3E32272}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Todo_wXUnit_Tests", "..\Todo_wXUnit_Tests\Todo_wXUnit_Tests.csproj", "{EBB766A3-DF9B-4212-B08B-5CB2E3E32272}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

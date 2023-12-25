@@ -14,6 +14,8 @@ builder.Services.AddDbContext<TodoContext>(options =>
     options.UseInMemoryDatabase("YourDatabaseName");
 });
 
+InMemoryDbInitializer.Initialize(builder.Services.BuildServiceProvider());
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
