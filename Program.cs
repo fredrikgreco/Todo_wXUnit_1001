@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-
+builder.Services.AddControllers();  // Add this line to enable controllers - this is something i have no idea about
 
 builder.Services.AddDbContext<TodoContext>(options =>
 {
@@ -34,5 +34,6 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapRazorPages();
+app.MapControllers();  // Add this line to map controllers - also a thing i don't know anything about
 
 app.Run();
