@@ -16,7 +16,7 @@ namespace Todo_wXUnit_1001.Pages
 
         public List<Todo> Todos { get; set; }
         [BindProperty] public Todo Todo { get; set; }
-        public bool ShowDeletedTodos { get; set; } = false;
+        //public bool ShowDeletedTodos { get; set; } = false;
 
         public IndexModel(TodoContext dbContext, ILogger<IndexModel> logger)
         {
@@ -28,7 +28,7 @@ namespace Todo_wXUnit_1001.Pages
         {
             Console.WriteLine("OnGet method called");
             Todo = new Todo();
-            ShowDeletedTodos = false;
+            //ShowDeletedTodos = false;
             UpdateTodos(); // Wait for the asynchronous method to complete
             Console.WriteLine($"Number of Todos: {Todos?.Count}");
         }
@@ -40,33 +40,6 @@ namespace Todo_wXUnit_1001.Pages
         }
 
 
-        /*        private async Task UpdateTodos()
-                {
-                    var apiUrl = $"/Todo?showDeleted={ShowDeletedTodos}";
-
-                    using (var httpClient = new HttpClient())
-                    {
-                        httpClient.BaseAddress = new Uri(HttpContext.Request.Scheme + "://" + HttpContext.Request.Host.Value);
-
-                        try
-                        {
-                            var updatedTodos = await httpClient.GetFromJsonAsync<List<Todo>>(apiUrl);
-
-                            // Ensure that updatedTodos is not null before assigning it to Todos
-                            Todos = updatedTodos ?? new List<Todo>();
-                        }
-                        catch (Exception ex)
-                        {
-                            _logger.LogError($"Error updating todos: {ex.Message}");
-                            // Handle the error as needed
-                        }
-                    }
-                }*/
-
-
-
-
-
         public async Task<IActionResult> OnPost()
         {
             if (!ModelState.IsValid)
@@ -75,7 +48,7 @@ namespace Todo_wXUnit_1001.Pages
             _dbContext.Todos.Add(Todo);
             _dbContext.SaveChanges();
 
-            UpdateTodos(); // Wait for the asynchronous method to complete
+            UpdateTodos();
 
             return RedirectToPage("/Index");
         }
