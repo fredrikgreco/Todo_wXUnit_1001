@@ -123,3 +123,4 @@ D:\GitRepo\Todo_wXUnit_1001\obj\Debug\net8.0\refint\Todo_wXUnit_1001.dll
 D:\GitRepo\Todo_wXUnit_1001\obj\Debug\net8.0\Todo_wXUnit_1001.pdb
 D:\GitRepo\Todo_wXUnit_1001\obj\Debug\net8.0\Todo_wXUnit_1001.genruntimeconfig.cache
 D:\GitRepo\Todo_wXUnit_1001\obj\Debug\net8.0\ref\Todo_wXUnit_1001.dll
+D:\GitRepo\Todo_wXUnit_1001\bin\Debug\net8.0\Newtonsoft.Json.dll
