@@ -11,6 +11,7 @@
           "EntityFramework": "6.4.4",
           "Microsoft.EntityFrameworkCore.InMemory": "8.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.0",
+          "Newtonsoft.Json": "13.0.3",
           "Todo_wXUnit_Models": "1.0.0"
         },
         "runtime": {

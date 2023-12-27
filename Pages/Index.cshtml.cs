@@ -2,21 +2,21 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using Models_Todo;
-
+using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.Net.Http;
+using Todo_wXUnit_1001.Controllers;
 
 namespace Todo_wXUnit_1001.Pages
 {
     public class IndexModel : PageModel
     {
-        public readonly ILogger<IndexModel> _logger;
-
-        public readonly TodoContext _dbContext;
+        private readonly ILogger<IndexModel> _logger;
+        private readonly TodoContext _dbContext;
 
         public List<Todo> Todos { get; set; }
-
-        [BindProperty]
-        public Todo Todo { get; set; }
-
+        [BindProperty] public Todo Todo { get; set; }
+        //public bool ShowDeletedTodos { get; set; } = false;
 
         public IndexModel(TodoContext dbContext, ILogger<IndexModel> logger)
         {
@@ -24,28 +24,54 @@ namespace Todo_wXUnit_1001.Pages
             _dbContext = dbContext;
         }
 
-        public void OnGet()
+        public async Task OnGet()
         {
-
-            Todo = new Todo(); // Initialize Todo or retrieve it from your data source
-            Todos = _dbContext.Todos.ToList();
-
+            Console.WriteLine("OnGet method called");
+            Todo = new Todo();
+            //ShowDeletedTodos = false;
+            UpdateTodos(); 
+            Console.WriteLine($"Number of Todos: {Todos?.Count}");
         }
 
 
-        public IActionResult OnPost()
+        private void UpdateTodos()
+        {
+            Todos = _dbContext.Todos.ToList();
+        }
+
+
+        public async Task<IActionResult> OnPost()
         {
             if (!ModelState.IsValid)
-            {
                 return Page();
-            }
 
             _dbContext.Todos.Add(Todo);
             _dbContext.SaveChanges();
 
+            UpdateTodos();
+
             return RedirectToPage("/Index");
         }
+        [HttpPost("UpdateIsDone")]
+        public IActionResult UpdateIsDone([FromBody] UpdateTodoRequest request)
+        {
+            var todo = _dbContext.Todos.FirstOrDefault(t => t.Id == request.TodoId);
+            if (todo != null)
+            {
+                _dbContext.Todos.Remove(todo);
+                _dbContext.SaveChanges();
+                UpdateTodos();
+                return Page();   
+            }
+
+            return NotFound(new { Message = "Todo not found" });
+        }
+
+
+
+
+
+
+
     }
 }
-
-
