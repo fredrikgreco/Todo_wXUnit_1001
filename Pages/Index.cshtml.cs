@@ -29,7 +29,7 @@ namespace Todo_wXUnit_1001.Pages
             Console.WriteLine("OnGet method called");
             Todo = new Todo();
             //ShowDeletedTodos = false;
-            UpdateTodos(); // Wait for the asynchronous method to complete
+            UpdateTodos(); 
             Console.WriteLine($"Number of Todos: {Todos?.Count}");
         }
 
