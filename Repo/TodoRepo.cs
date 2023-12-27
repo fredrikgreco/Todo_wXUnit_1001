@@ -1,4 +1,7 @@
-﻿using Models_Todo;
+﻿using Microsoft.EntityFrameworkCore;
+using Models_Todo;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace task0102_Todo.Repo
 {
@@ -17,9 +20,22 @@ namespace task0102_Todo.Repo
             _context.SaveChanges();
         }
 
-        
+        public void RemoveTodo(int todoId)
+        {
+            var todoToRemove = _context.Todos.Find(todoId);
+
+            if (todoToRemove != null)
+            {
+                _context.Todos.Remove(todoToRemove);
+                _context.SaveChanges();
+            }
+        }
+
+        public IEnumerable<Todo> GetTodos()
+        {
+            return _context.Todos.ToList();
+        }
+
+        // Add other repository methods for CRUD operations
     }
 }
-
-
-
