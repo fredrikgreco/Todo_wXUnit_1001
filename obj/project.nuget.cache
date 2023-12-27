@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9omRKPo5sC626HYwJyUmYTIPYrx2sVf2p0r6rAb6ek3LEFFxNITEcfJp5ojBZ+vQDn0NrO3WDaPliqp39bcNEQ==",
+  "dgSpecHash": "bK+W2WOvinJK89Rhuif7Tb8ZF6oigUOwRYgIkdQRHYc3pd9g4Cd7W5r7KPD8WaRVuuclYm6bwjRJoqB+sXXa4A==",
   "success": true,
   "projectFilePath": "D:\\GitRepo\\Todo_wXUnit_1001\\Todo_wXUnit_1001.csproj",
   "expectedPackageFiles": [
@@ -34,6 +34,7 @@
     "C:\\Users\\deadn\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\deadn\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\deadn\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\deadn\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\deadn\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\deadn\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\deadn\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
