@@ -30,8 +30,9 @@
                         </div>
                         <div>
                             <label asp-for="@todo.IsDone"></label>
-                            <input type="checkbox" data-todo-id="@todo.Id" @(todo.IsDone ? "checked" : "") />
+                            <input type="checkbox" id="@($"isDoneCheckbox_{todo.Id}")" @(todo.IsDone ? "checked" : "") />
                         </div>
+
                         <div>
                             <button onclick="deleteTodo('@todo.Id')">Delete</button>
                         </div>
@@ -67,6 +68,7 @@
                 }
             }
             */
+           // KEEP THIS CUZ IT FKKN WORK /\ 100 fails and counting
 
 
             function deleteTodo(todoId) {
@@ -103,51 +105,27 @@
 
                 checkboxes.forEach(function (checkbox) {
                     checkbox.addEventListener('change', function () {
-                        var todoId = checkbox.id.split('_')[1];
                         var isDoneValue = checkbox.checked;
+                        var todoContainer = checkbox.closest('.ulGridCell');
+                        var inputFields = todoContainer.querySelectorAll('input, textarea');
 
-                        console.log('Todo ID:', todoId);
-                        console.log('Is Done Value:', isDoneValue);
+                        inputFields.forEach(function (input) {
+                            if (input.type !== 'checkbox') {
+                                input.disabled = isDoneValue;
+                            }
+                        });
 
-                        console.log('Request Payload:', JSON.stringify({ todoId: todoId, isDone: isDoneValue }));
-
-                        fetch('/Todo/UpdateIsDone', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                            },
-                            body: JSON.stringify({
-                                todoId: todoId,
-                                isDone: isDoneValue,
-                                isDeleted: false,
-
-                                title: document.getElementById(`title_${todoId}`).value,
-                                content: document.getElementById(`content_${todoId}`).value
-                            }),
-                        })
-                            .then(response => response.json())
-                            .then(data => {
-                                console.log('Success:', data);
-
-                                if (data.isDeleted) {
-                                    var todoContainer = checkbox.closest('.ulGridCell');
-                                    todoContainer.remove();
-                                }
-
-                                var todoContainer = checkbox.closest('.ulGridCell');
-                                var inputFields = todoContainer.querySelectorAll('input, textarea');
-                                inputFields.forEach(function (input) {
-                                    if (input.type !== 'checkbox') {
-                                        input.disabled = !!isDoneValue;
-                                    }
-                                });
-                            })
-                            .catch((error) => {
-                                console.error('Error:', error);
-                            });
+                        todoContainer.classList.toggle('done-todo', isDoneValue);
                     });
                 });
             });
+
+
+
+
+
+
+
         </script>
     }
 </body>
