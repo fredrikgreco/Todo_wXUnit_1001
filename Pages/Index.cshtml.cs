@@ -52,20 +52,53 @@ namespace Todo_wXUnit_1001.Pages
 
             return RedirectToPage("/Index");
         }
-        [HttpPost("UpdateIsDone")]
-        public IActionResult UpdateIsDone([FromBody] UpdateTodoRequest request)
+
+/*        public IActionResult OnPostDeleteTodoAsync(int todoId)
         {
-            var todo = _dbContext.Todos.FirstOrDefault(t => t.Id == request.TodoId);
+            var todo = _dbContext.Todos.FirstOrDefault(t => t.Id == todoId);
             if (todo != null)
             {
+                // Remove the todo from the database
                 _dbContext.Todos.Remove(todo);
                 _dbContext.SaveChanges();
+
+                // Remove the todo from the list
                 UpdateTodos();
-                return Page();   
+
+                return RedirectToPage("/Index");
             }
 
             return NotFound(new { Message = "Todo not found" });
-        }
+        }*/
+
+        /*        [HttpPost("UpdateIsDone")]
+                public IActionResult UpdateIsDone([FromBody] UpdateTodoRequest request)
+                {
+                    var todo = _dbContext.Todos.FirstOrDefault(t => t.Id == request.TodoId);
+                    if (todo != null)
+                    {
+                        // Update the IsDone and IsDeleted properties
+                        todo.IsDone = request.IsDone;
+                        todo.IsDeleted = request.IsDeleted;
+
+                        // Save changes to the database
+                        _dbContext.SaveChanges();
+
+                        // Remove the todo from the list if it is deleted
+                        if (request.IsDeleted)
+                        {
+                            UpdateTodos();
+                            return Page();
+                        }
+
+                        // Handle other logic as needed
+
+                        return Page();
+                    }
+
+                    return NotFound(new { Message = "Todo not found" });
+                }*/
+
 
 
 

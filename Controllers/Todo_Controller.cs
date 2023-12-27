@@ -51,7 +51,23 @@ namespace Todo_wXUnit_1001.Controllers
 
             return NotFound(new { Message = "Todo not found" });
         }
+
+        [HttpPost("DeleteTodo/{todoId}")]
+        public IActionResult DeleteTodo(int todoId)
+        {
+            var todo = _dbContext.Todos.FirstOrDefault(t => t.Id == todoId);
+            if (todo != null)
+            {
+                _dbContext.Todos.Remove(todo);
+                _dbContext.SaveChanges();
+                return Ok(new { Message = "Todo deleted successfully" });
+            }
+
+            return NotFound(new { Message = "Todo not found" });
+        }
     }
+
+
 
     public class UpdateTodoRequest
     {
