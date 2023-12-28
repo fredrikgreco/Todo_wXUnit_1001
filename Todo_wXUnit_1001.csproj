@@ -20,4 +20,12 @@
     <ProjectReference Include="..\Todo_wXUnit_Models\Todo_wXUnit_Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="imgzzz\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\imgzzz\logo1001.png" />
+  </ItemGroup>
+
 </Project>
