@@ -4,7 +4,6 @@
 
 /.vs/Todo_wXUnit_1001/FileContentIndex
 
-# User-specific files
 
 bin
 
@@ -16,4 +15,6 @@ packages
 *.user
 *.suo
 *.log
+
 *.vscode/
+
