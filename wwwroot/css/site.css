@@ -1,10 +1,14 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
@@ -14,17 +18,90 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    padding: 25px;
+    margin-bottom: 60px;
+    background-color: #eeffd2;
+    font-family: 'Times New Roman', serif;
 }
 
 .hidden {
-    display: none;
+  display: none;
 
 }
 
+#todoHeadText {
+    margin-top:30px;
+    font-size: 26px;
+}
 
+#headMainGrid {
+    display: grid;
+    width: 600px;
+    justify-content: center;
+    /* justify-self: center; */
+    /* justify-items: center; */
+    grid-template-columns: 1fr 2fr;
+}
 
+#leftLogoCell {
+  display: grid;
+  width: 150px;
+}
 
+#rightFormGrid {
+  display: grid;
+
+}
+
+#formGrid {
+  display: grid;
+
+}
+
+#ulGrid {
+    width: 450px;
+}
+
+#saveButton {
+    width: 100px;
+    height: 50px;
+    color: #FFFFFF;
+    background-color: #600664;
+    border: 2px solid #0d3306; /* Border color */
+    border-radius: 25px; /* Rounded corners */
+}
+
+#deleteButton {
+    width: 75px;
+    height: 30px;
+    color: #FFFFFF;
+    background-color: #600664;
+    border: 2px solid #0d3306; /* Border color */
+    border-radius: 25px; /* Rounded corners */
+}
+
+button:hover {
+    background-color: #600664; /* Background color on hover */
+    color: #ffffff; /* Text color on hover */
+    border-color: #ffffff; /* Border color on hover */
+}
+
+.form-control {
+    background-color: #d2f3c7;
+}
+
+input[type="checkbox"] {
+    accent-color: #d2f3c7;
+}
+
+[id^="content_"] {
+    background-color: #d2f3c7;
+}
+
+[id^="title_"] {
+    background-color: #d2f3c7;
+
+}
 
 @media (min-width: 768px) {
   html {

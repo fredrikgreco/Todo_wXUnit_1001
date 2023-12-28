@@ -10,7 +10,9 @@
 
     <div id="mainGrid">
         <div id="topGrid">
-            <h1>TODO</h1>
+            <h1 id="todoHeadText">
+                TODOS &darr;
+            </h1>
         </div>
         <div id="ulGrid">
 
@@ -34,7 +36,7 @@
                         </div>
 
                         <div>
-                            <button onclick="deleteTodo('@todo.Id')">Delete</button>
+                            <button id="deleteButton" onclick="deleteTodo('@todo.Id')">Delete</button>
                         </div>
                     </div>
                 }
