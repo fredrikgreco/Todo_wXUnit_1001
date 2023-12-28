@@ -13,4 +13,4 @@ i have tested the app on 2 computers and it runs on both so it should be done.
 
 all tests pass when run
 
-
+(a few disclaimers more: the Model contains a attribute never used, i was working on a way to hide/show deleted Todos when the app crashed and i lost almost all the code i had so i just skipped that feature, it was not needed for the app in anyway, was just a curiousity mini-project i tested)
