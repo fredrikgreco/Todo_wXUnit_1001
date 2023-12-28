@@ -3,3 +3,11 @@
 ################################################################################
 
 /.vs/Todo_wXUnit_1001/FileContentIndex
+
+# User-specific files
+
+bin
+
+obj
+
+packages
