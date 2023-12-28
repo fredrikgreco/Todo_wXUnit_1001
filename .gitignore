@@ -3,3 +3,15 @@
 ################################################################################
 
 /.vs/Todo_wXUnit_1001/FileContentIndex
+
+bin
+
+obj
+
+packages
+
+
+*.user
+*.suo
+*.log
+*.vscode/
